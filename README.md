@@ -3,9 +3,10 @@
 ## Perdorimi i programit
 Ky program për dekriptim me algoritmin AES përdor librarin Cryptodome.
 Për te instaluar këtë librari duhet të ekzekutohet në terminal komanda si më posht:
-**“python -m pip install pycryptodome”**
+**“python -m pip install pycryptodome”**.
+
 Programi mund të ekzekutohet me anë të komandës:
-**“python AES-ECB.py”**
+**“python AES-ECB.py”**.
 
 ## Gjetja e çelësit dhe dekriptimi i mesazhit
 Në fajllin keys.txt ndodhën sekuencat e mundshme fillestare të çelësave, ku 14 bajtat e parë të çelësit janë determenistik. Gjithashtu i dijmë faktet që bajti me indeks 3 < ‘2b’, bajti me indeks 0 < se bajti me indeks 5 dhe bajti me indeks 4 < ‘20’. Duke shfrytëzuar këto mangësi të sistemit e dekriptojm mesazhin e enkriptuar “6ba84490e67cfba8fd07354d2899b58f”. Në këtë mënyrë me anë të këtyre kushteve nga fajlli keys.txt kemi gjetur vetëm 3 çelësa që i plotësojnë këto kushte. Për të gjithë çelësat janë nxjerrur bajti me indeks 3,0,5 dhe bajti me indeks 4 dhe të gjithë me rend janë krahasuar me vlerat përkatëse sipas kushteve. Pasi që vlerat janë në heksadecimal, për të nxjerrë p.sh bajtin me indeks 0 është dashtë që nga stringu i key të merret karakteri me indeks 0 dhe karakteri me index 1 ku pastaj është kthyer në vlerë decimale dhe është krahasuar me vleren e kushtit ku edhe ajo vlerë është kthyer në decimal. Në mënyrë të njëjtë është vepruar për të gjithë bajtat.
