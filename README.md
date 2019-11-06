@@ -12,4 +12,5 @@ Në fajllin keys.txt ndodhën sekuencat e mundshme fillestare të çelësave, ku
 
 3 çelësat e fituara nga këto kushte e kanë gjatësinë 14 bajta, por AES 128 përdor çelësin me gjatësi 16 bajta, prandaj janë gjeneruar të gjithë kombinimet e numrave hexadecimal me gjatësi 4 karaktere. Duke filluar nga 0000 deri ffff. Me gjenerimin e këtyre kombinimeve është kompletuar çelësi në gjatësi 16 bajta dhe me të gjithë çelësat është dekriptuar mesazhi, ku teksti i dekriptuar është krahasuar nëse e përmban tekstin “GR 04” dhe mesazhi që e ka përmbajtur këtë tekst ka qenë mesazhi i duhur.
 
+## Hapësira e çelësave
 Numrat heksadecimal janë gjithsej 16, numri i karaktereve për t’u gjeneruar është 4 kështu që për të gjeneruar të gjitha kombinimet duhet 16^4 gjithsej 65536 kombinime. Çelësat e gjetur nga kushtet janë 3 dhe për secilin çelës duhet të provohen këto kombinime prandaj hapësira totale e çelësave është 3 * 65536 = 196608.
